@@ -1,0 +1,86 @@
+<div class="rWrap">
+  <div class="aligner">
+    <div class="p01">
+      <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353318.jpg" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353322.jpg" class="hidden-sm">
+      <div class="eyeDiv">
+        <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353313.png" alt="">
+        <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353314.png" alt="">
+        <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353315.png" alt="">
+        <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353316.png" alt="">
+        <img src="//img.loccitane.com/ocms/img/lib/flag/OCC_353317.png" alt="">
+      </div>
+    </div>
+    <div class="p02">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_1c30c5a56ff547ba8a2cdfaf57647e39.png" class="hidden-lg" usemap="#p02">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_d4d96cd718974dde8d9db7b1bb0e9361.png" class="hidden-sm" usemap="#p02">
+      <map name="p02">
+        <area alt="비누 1개로 착한 소비하러 가기"
+              href="http://kr.loccitane.com/default.aspx?a=1192839" target="_blank"
+              data-m="49, 395, 366, 450"
+              data-pc="496, 340, 791, 386"
+              shape="rect">
+      </map>
+    </div>
+    <div class="p03">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_46782e4c0f5d4bdca541a97d4785e68f.png" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_e29e7792e44b4937a5c9de82bc8b152d.png" class="hidden-sm">
+    </div>
+
+    <div class="p04">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_d0ed9cedb3bb4db2ae9428cb49a3e253.png" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_f5c68709e1464eab96a15dd230ee9b63.png" class="hidden-sm">
+    </div>
+    <div class="p05">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_a31fe5734ea8473e98162c6f6805e08f.png" class="hidden-lg" usemap="#p05">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_6508ee6efb3048baaaa40936d2f6f4b0.png" class="hidden-sm" usemap="#p05">
+      <map name="p05">
+        <area alt="비누 1개로 착한 소비하러 가기"
+              href="http://kr.loccitane.com/default.aspx?a=1192839" target="_blank"
+              data-m="46, 649, 359, 703"
+              data-pc="644, 602, 937, 648"
+              shape="rect">
+        <area alt="유니세프에 직접 후원하기"
+              href="https://goo.gl/79UWjT" target="_blank"
+              data-m="370, 650, 681, 705"
+              data-pc="962, 602, 1256, 648"
+              shape="rect">
+      </map>
+    </div>
+    <div class="p06">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_3bf70cc8f9964344903fd0d6ef4f47cd.png" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_dd179f1ce2ac4c3199887a4d7789877c.png" class="hidden-sm">
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(e){
+    $(".rWrap .p01 .eyeDiv img").eq(0).css({"display" : "block"});
+    setTimeout(eyeMotion, eyeSpeed)
+  });
+
+  var eyeCount = 0;
+  var eyeArrow = true;
+  var eyeSpeed = 200;
+  var eyeDelay = 10;
+  function eyeMotion(){
+    if( eyeDelay > 0 ){
+      eyeDelay--;
+    }else{
+      if( eyeArrow ){
+        eyeCount++;
+        if( eyeCount === 4 ) eyeArrow=false;
+      }else{
+        eyeCount--;
+        if( eyeCount === 0 ) {
+          eyeArrow=true;
+          eyeDelay = 10;
+        }
+      }
+
+      $(".rWrap .p01 .eyeDiv img").css({"display" : "none"}).eq(eyeCount).css({"display" : "block"});
+    }
+    setTimeout(eyeMotion, eyeSpeed)
+  }
+
+</script>

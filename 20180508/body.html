@@ -1,0 +1,57 @@
+<div class="rWrap">
+  <div class="aligner">
+    <div class="p01">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_f5115f45803245d3bc1ffc0820862ed1.png" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_d81694e2eb3e4b53abbe8cee0250a208.png" class="hidden-sm">
+    </div>
+    <div class="p02">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_ce4d98bfda514d39ace22b7cd91e461b.png">
+      <iframe src="https://www.youtube.com/embed/5imU26fsWRE?rel=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="p03">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_988d6f218d0d45b2bff3c05273970e8b.png" class="hidden-lg" usemap="#p03-mobile">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_2e0e538095fe4abeb363460d661f3c7e.png" class="hidden-sm" usemap="#p03-pc">
+      <map name="p03-mobile">
+        <area shape="rect" data-coords="175, 194, 536, 240">
+        <area shape="poly" data-coords="294, 355, 420, 273, 541, 474, 411, 550">
+        <area shape="poly" data-coords="538, 395, 445, 623, 588, 679, 679, 477, 675, 443">
+        <area shape="poly" data-coords="212, 648, 362, 598, 442, 841, 291, 888">
+      </map>
+      <map name="p03-pc">
+        <area shape="rect" coords="778, 187, 1140, 232" href="javascript:;">
+        <area shape="poly" coords="926, 370, 1084, 269, 1237, 515, 1072, 612" href="javascript:;">
+        <area shape="poly" coords="1226, 418, 1108, 698, 1290, 769, 1398, 518, 1395, 475" href="javascript:;">
+        <area shape="poly" coords="828, 727, 1014, 665, 1112, 962, 922, 1024" href="javascript:;">
+      </map>
+    </div>
+    <div class="p04">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_92da9c6e5e744c20a3ec4eade4941a30.png" class="hidden-lg">
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_ff9ee6513d6c492baabe66c5ea939695.png" class="hidden-sm">
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script>
+    function coordsScale() {
+      var scale = $(window).width() / 730;
+      $("map[name=p03-mobile] area").attr('coords', function () {
+        var arr = $(this).data('coords').split(",");
+        for (var i = 0; i < arr.length; ++i) {
+          arr[i] = arr[i] * scale;
+        }
+        return arr.join(",");
+      });
+    }
+    $(window).resize(coordsScale);
+    coordsScale();
+    $("map area").click(function () {
+      window.open(
+        [
+          'https://kr.loccitane.com/%EB%B9%84%EB%88%84,22,2,1189,0.htm',
+          'https://kr.loccitane.com/%EC%8B%9C%EC%96%B4-%EB%B2%84%ED%84%B0-%EC%86%9D-%EB%B2%84%EB%B2%A0%EB%82%98-250g,22,2,1133,551535.htm#s=1189',
+          'https://kr.loccitane.com/%EC%8B%9C%EC%96%B4-%EB%B2%84%ED%84%B0-%EC%86%9D-%EB%B0%80%ED%81%AC-250g,22,2,1133,23002.htm#s=1189',
+          'https://kr.loccitane.com/%EC%8B%9C%EC%96%B4-%EB%B2%84%ED%84%B0-%EC%86%9D-%EB%9D%BC%EB%B2%A4%EB%8D%94,22,2,1133,551541.htm#s=1189',
+        ][$(this).index()]
+      );
+    })
+  </script>
+</div>

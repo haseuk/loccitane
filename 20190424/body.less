@@ -1,0 +1,97 @@
+@import "../css/slick";
+
+img { display: block; }
+.rWrap {
+  .aligner { position: relative;
+    & > div { position: relative;
+      & > img.hidden-lg { width: 100%; }
+    }
+  }
+
+  .p02, .p04 {
+    .slider { width:90.4%; position:absolute; left:50%; overflow:hidden; box-sizing:content-box;
+      img { width:100%; }
+      .slick-arrow { display:none !important; }
+    }
+  }
+
+  .p02 {
+    .slider { height:51.76%; top:22.88%; padding-top:8.45%; transform:translateX(-50%);
+      .slick-dots { width:100%; position:absolute; top:0;
+        li { display:inline-block; width:19.72%; height:50px; margin-left:2.74%;
+          button { width:100%; height:100%; cursor:pointer; }
+          #slick-slide-control00 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_ffa5c2f432634cdcaf7f68b94ae97bf3.png") no-repeat; background-size:contain; margin-left:0; }
+          #slick-slide-control01 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_964a2848fb4142b0b64361087a3bc67c.png") no-repeat; background-size:contain; }
+          #slick-slide-control02 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_3ca1ace3c3d645f096fe97c86c0ce92e.png") no-repeat; background-size:contain; }
+          #slick-slide-control03 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_4fc4b5da65bc4ce98127454fa1b85f6f.png") no-repeat; background-size:contain; }
+        }
+        .slick-active {
+          #slick-slide-control00 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_632de6bb0c05479f9d0beb530f1ae319.png") no-repeat; background-size:contain; margin-left:0; }
+          #slick-slide-control01 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_0affc061f64849868ce8445d313d05d6.png") no-repeat; background-size:contain; }
+          #slick-slide-control02 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_362ba375b6854b2489d6834bcc3e70ab.png") no-repeat; background-size:contain; }
+          #slick-slide-control03 { background:url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_08e19c2ae0a54877a160c88dd1f3defc.png") no-repeat; background-size:contain; }
+        }
+      }
+    }
+  }
+  .p04 {
+    .slider { height:53.23%; top:34.27%; z-index:1; transform:translateX(-50%);
+      .slick-dots { position: absolute; width: 100%; left: 0; bottom: 0; height: 1.5vw; text-align: center;
+        li { display: inline-block; margin: 0 0.4vw;
+          button { background: #babfc6; width: 1.2vw; height: 1.2vw; display: inline-block; font-size:0; border-radius: 50%; }
+          &.slick-active {
+            button { background: #038a9e; }
+          }
+        }
+      }
+    }
+  }
+}
+
+.slick-slide .hidden-sm { display:none; }
+.hidden-sm { display: none; }
+
+
+
+
+@media (min-width: 1000px) {
+  .hidden-lg { display: none !important; }
+  .hidden-sm { display: block !important; }
+  .rWrap { position: relative; overflow: hidden; zoom: 0.75;
+    .aligner { position: relative; left:50%; margin-left:-960px; text-align: center; width:1920px; font-size: 0;
+      & > div { & > img.hidden-sm { width:1920px; } }
+    }
+
+    .p02, .p04 {
+      .slider { width:1000px; }
+    }
+
+    .p02 {
+      .slider { height:560px; top: 210px; padding-top:68px;
+        .slick-dots {
+          li { width:144px; height:50px; margin-left:20px; }
+        }
+      }
+    }
+
+    .p04 {
+      .slider { height:438px; top:228px; z-index:1; padding:0 66px; margin-left: -566px; transform:translateX(0);
+        .slick-arrow { width:27px; height:53px; font-size:0; display:inline-block!important; position:absolute; top: 40%; z-index:2; background:none; }
+        .slick-prev { left: 0; }
+        .slick-next { right: 0;  }
+        .slick-dots { height: 8px;
+          li { display: inline-block; margin: 0 2px;
+            button { width: 8px; height: 8px; }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .rWrap { zoom: 1;
+    .video { width: 100vw; }
+  }
+}

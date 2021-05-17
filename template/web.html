@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="ko-KR" lang="ko-KR" class=" svgfilters inlinesvg supports cssfilters">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    @@include('../css/common.css')
+    @@include('../temp/body.css')
+  </style>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+</head>
+<body>
+  @@include('../temp/body.html')
+<script>
+  var arr = [];
+  $('img').click(function(e){
+    if (e.altKey) {
+      console.log(e.offsetY);
+      console.log(arr);
+      arr = [];
+    } else {
+      arr.push(e.offsetX);
+      arr.push(e.offsetY);
+    }
+  });
+  function resized() {
+    var w = $(window).width();
+    var scale = w / 730;
+    $("map area").attr('coords', function () {
+      var result;
+      if (w < 1000) {
+        var arr = $(this).data('m').split(",");
+        for (var i = 0; i < arr.length; ++i) {
+          arr[i] = arr[i] * scale;
+        }
+        result = arr.join(",");
+      } else {
+        result = $(this).data('pc');
+      }
+      return result;
+    });
+  }
+  $(window).resize(resized);
+  resized();
+</script>
+</body>

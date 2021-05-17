@@ -1,0 +1,29 @@
+@import "../css/slick";
+
+img { display: block; }
+.rWrap {
+  .aligner { position: relative;
+    & > div { position: relative;
+      & > img.hidden-lg { width: 100%; }
+    }
+  }
+}
+.hidden-sm { display: none; }
+
+
+@media (min-width: 1000px) {
+  .hidden-lg { display: none !important; }
+  .hidden-sm { display: block !important; }
+  .rWrap { position: relative; overflow: hidden; zoom: 0.75;
+    .aligner { position: relative; left:50%; margin-left:-950px; text-align: center; width:1900px; font-size: 0;
+      & > div { & > img.hidden-sm { width:1900px; } }
+    }
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .rWrap { zoom: 1;
+    .video { width: 100vw; }
+  }
+}

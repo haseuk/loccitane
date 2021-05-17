@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-file-copy": "^0.0.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.0",
+    "syncy": "^2.2.2",
+    "yargs": "^11.0.0"
+  }
+}

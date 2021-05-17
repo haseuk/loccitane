@@ -1,0 +1,59 @@
+@import "../css/slick";
+
+img { display: block; }
+.rWrap {
+  .aligner {
+    & > div { position: relative;
+      & > img.hidden-lg { width: 100%; }
+    }
+    .nav { display: none; position: fixed; width:100%; top:0; height: 120%; padding-top:30%; box-sizing: border-box; z-index: 1;
+      background: rgba(0,0,0,0.7);
+      & > img.hidden-lg { width: 20%; position: absolute; right:0;  }
+    }
+    .nav-open { position: fixed; width:20%; top:0; padding-top:30%; right:0; }
+    .nav-open.on { display: none; }
+    .nav-open.on + .nav { display: block; }
+  }
+}
+.hidden-sm { display: none; }
+
+.p01 {
+  iframe { position: absolute; left:11.4%; top:55.9%; width:77%; height: 26.6%; }
+  #particle { position: absolute; left:75%; top:0; padding-top: 70%;
+    i { position: absolute; display: block; background-size: contain; }
+  }
+}
+
+.p03 {
+  .slider { width: 100%; position: absolute; top: 0; height: 100%; overflow: hidden;
+    img { width: 100%; }
+  }
+  .slick-arrow { position: absolute; top: 50%; font-size: 0; width: 12px; height: 22px; background-size: contain; background-color: transparent; z-index: 2;
+    &.slick-prev { left: 5px; background-image: url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_030d15bc4054431a84465ee6ef722e19.png"); &:before { display: none; } }
+    &.slick-next { right: 5px; background-image: url("//img.loccitane.com/ocms/img/lib/PROMO/OCC_fd408fc00748487caffa97160b993e47.png"); &:before { display: none; } }
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .hidden-lg { display: none !important; }
+  .hidden-sm { display: block !important; }
+  .rWrap { position: relative; overflow: hidden;
+    .aligner { position: relative; left:50%; margin-left:-950px; text-align: center; width:1900px; font-size: 0;
+      & > div { & > img.hidden-sm { width:1900px; } }
+      .nav { display: block; top:250px; right:35px; padding-top:0; background: none; width: auto;
+        .hidden-sm { width: auto; }
+      }
+    }
+  }
+
+  .p01 {
+    iframe { position: absolute; left:507px; top:660px; width:500px; height: 350px; }
+    #particle { left:1144px; padding-top:0; top: 518px; }
+  }
+
+  .p03 {
+    .slider { width: 1000px; position: absolute; left: 50%; margin-left: -500px; top: 0;}
+    .slick-arrow { width: 23px; height: 43px; }
+  }
+}

@@ -1,0 +1,24 @@
+img { display: block; }
+.rWrap {
+  .aligner { position:relative;
+    & > img.hidden-lg { width:100%;margin:0 auto;}
+    .btn {position:absolute;background:url(https://img.loccitane.com/ocms/img/lib/flag/OCC_271493.png);top: 88%;left: 27.5%;width: 45.1%;height: 6.1%;}
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .hidden-lg { display: none !important; }
+  .hidden-sm { display: block !important; }
+  .rWrap { position: relative; overflow: hidden; zoom: 0.75;
+    .aligner { background:url(http://img.loccitane.com/ocms/img/lib/PROMO/OCC_72f5cd4e6542496abe32826203f60025.jpg) no-repeat; background-size:contain; position: relative; left:50%; margin-left:-760px; text-align: center; width:1520px; height:858.4px; font-size: 0;
+      .btn { top:84.2%;left:40.8%;width: 18.5%;height: 7.0%;}
+    }
+
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .rWrap { zoom: 1; }
+}
