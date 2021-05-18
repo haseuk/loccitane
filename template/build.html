@@ -2,26 +2,27 @@
 @@include('../css/common.css')
 @@include('../temp/body.css')
 </style>
-<script src="//code.jquery.com/jquery.min.js"></script>
 @@include('../temp/body.html')
 <script>
+(function() {
   function resized() {
-    var w = $(window).width();
+    var w = window.innerWidth;
     var scale = w / 730;
-    $("map area").attr('coords', function () {
+    document.querySelectorAll('map area[data-m]').forEach(function (e) {
       var result;
       if (w < 1000) {
-        var arr = $(this).data('m').split(",");
+        var arr = e.dataset.m.split(",");
         for (var i = 0; i < arr.length; ++i) {
           arr[i] = arr[i] * scale;
         }
         result = arr.join(",");
       } else {
-        result = $(this).data('pc');
+        result = e.getAttribute('data-pc');
       }
-      return result;
+      e.setAttribute('coords', result);
     });
   }
-  $(window).resize(resized);
+  window.addEventListener('resize', resized);
   resized();
+})();
 </script>

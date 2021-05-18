@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-copy": "^1.1.0",
     "gulp-file-copy": "^0.0.1",
     "gulp-file-include": "^2.0.1",

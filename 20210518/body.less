@@ -1,0 +1,74 @@
+img { display: block; }
+.rWrap {
+  .hidden-sm { display: none !important; }
+  .aligner { position: relative;
+    & > div { position: relative;
+      & > img.hidden-lg { width: 100%; }
+    }
+
+    img { backface-visibility: hidden; }
+
+    .p06 { height: 113vw;  box-sizing: border-box; border-top:1px solid #000; position: relative;
+      iframe { width: 65.2%; height: 82%; position: relative; margin: 9% auto; display: block; }
+    }
+    .p07 { position: relative;
+      .slider-m { width: 100%; padding: 0 12%; box-sizing: border-box; position: absolute; left: 50%; top: 7.6%; transform: translateX(-50%);
+        .slick-list { z-index: 1; }
+        img { width: 100%; }
+        .slick-arrow { width: 7%; height: 9%; top: 45%; z-index: 1;
+          &.slick-prev { left: 4%; }
+          &.slick-next { right: 4%; }
+        }
+        .slick-dots { top: -4%; bottom: 0; left: 50%; transform: translateX(-50%);
+          li { width:10px; height:10px; background: #cdcdcd; margin:0 1.3%; border-radius: 50%;
+            button { display: none; }
+            &.slick-active { background: #000; }
+          }
+        }
+      }
+    }
+  }
+}
+
+.slick-slide .hidden-sm { display:none; }
+.hidden-sm { display: none; }
+
+
+@media (min-width: 1000px) {
+  .rWrap { position: relative; overflow: hidden; zoom: 0.5;
+    .hidden-lg { display: none !important; }
+    .hidden-sm { display: block !important; }
+    .aligner { position: relative; left:50%; margin-left:-960px; text-align: center; width:1920px; font-size: 0;
+      & > div { & > img.hidden-sm { width:1920px; } }
+
+      .p06 { padding: 92px 0 80px; border-top: 3px solid #000; height: auto;
+        iframe { width:712px; height: 890px; margin: 0 auto; }
+      }
+      .p07 { position: relative;
+        .slider-pc { width:1834px; height:1280px; position: absolute; left: 41px; top:107px; padding: 0 83px; box-sizing: border-box;
+          .slick-arrow { width: 83px; height:260px; z-index: 1; transform: translateY(-86%);
+            &.slick-prev { left: 0; }
+            &.slick-next { right: 0; }
+          }
+          .slick-dots { bottom: -72px; left: 50%; transform: translateX(-50%);
+            li { width:22px; height:22px; background: #cdcdcd; margin:0 17px; border-radius: 50%;
+              button { display: none; }
+              &.slick-active { background: #000; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .rWrap { zoom: 0.75; }
+}
+
+@media (min-width: 1900px) {
+  .rWrap { zoom: 1; }
+}
+
+
