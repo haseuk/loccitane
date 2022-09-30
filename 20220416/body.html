@@ -1,0 +1,54 @@
+<div class="rWrap">
+  <div class="aligner hidden-lg">
+    <div class="p01">
+      <div id="zone01" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z1_c3936eea9dde43e5a4611d82778e2545.png" class="hidden-lg">
+    </div>
+    <div class="p02">
+      <div id="zone02" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z2_8c4fb4848c4a4472ad21ac7857fe4eab.png" class="hidden-lg">
+    </div>
+    <div class="p03">
+      <div id="zone03" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z3_7b4380c2167b44c585661ca7f5752b10.png" class="hidden-lg">
+    </div>
+    <div class="p04">
+      <div id="zone04" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z4_af1ca91459b6439288fa20e0d8280d4c.png" class="hidden-lg">
+    </div>
+    <div class="p05">
+      <div id="zone05" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z5_0e75d63b5dd6431c89c49997ffa66669.png" class="hidden-lg">
+    </div>
+    <div class="p06">
+      <div id="zone06" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z6_58cf108fcdef40ee8327db12e677a47f.png" class="hidden-lg">
+    </div>
+    <div class="p07">
+      <div id="zone07" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z7_0e474f008cdb46a3a21723c485c29f68.png" class="hidden-lg">
+    </div>
+    <div class="p08">
+      <div id="zone08" class="zone"></div>
+      <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_z8_184679245977423288db69b895eaf298.png" class="hidden-lg">
+      <a class="btn">
+        <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_btn-on_380db768cb814732982bb497b125bd13.png" class="btn-on">
+        <img src="//img.loccitane.com/ocms/img/lib/PROMO/OCC_btn-off_392e188dfd82438494268413b997d324.png" class="btn-off">
+      </a>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      var hh = $('#header').height();
+      var zones = $('.zone');
+      var hValue = '-'+hh+'px'
+      for (let i = 0; i < zones.length; i++) {
+        zones[i].style.top = hValue;
+      }
+      $('.btn').on('click', function(e){
+        $('.btn').addClass('on');
+        e.preventDefault();
+      });
+    });
+  </script>
+</div>
